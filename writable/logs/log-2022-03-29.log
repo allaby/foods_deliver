@@ -1,0 +1,11 @@
+CRITICAL - 2022-03-29 06:19:59 --> syntax error, unexpected 'publicc' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\projets_web\forum\foods\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\projets_web\\...')
+#1 C:\projets_web\forum\foods\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\projets_web\forum\foods\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#5 C:\projets_web\forum\foods\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#6 C:\projets_web\forum\foods\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\projets_web\forum\foods\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\projets_web\forum\foods\system\Commands\Server\rewrite.php(43): require_once('C:\\projets_web\\...')
+#9 {main}
