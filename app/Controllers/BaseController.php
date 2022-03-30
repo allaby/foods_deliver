@@ -9,6 +9,10 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
 
+// use App\Model\UserModel;
+use App\Models\UserModel;
+use Tests\Support\Models\UserModel as SupportModelsUserModel;
+
 /**
  * Class BaseController
  *
@@ -35,7 +39,9 @@ class BaseController extends Controller
      *
      * @var array
      */
-    protected $helpers = [];
+    protected $helpers = ['functions_helper', 'url'];
+
+    const SITE_NAME = "";
 
     /**
      * Constructor.
@@ -47,6 +53,10 @@ class BaseController extends Controller
 
         // Preload any models, libraries, etc, here.
 
-        // E.g.: $this->session = \Config\Services::session();
+        $this->userModel = new UserModel();
+
+        $this->session = \Config\Services::session();
+
+
     }
 }

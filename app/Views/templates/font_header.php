@@ -30,14 +30,13 @@
     <div class="up">
         <a href="#" class="scrollup text-center"><i class="fas fa-chevron-up"></i></a>
     </div>
-    <!-- Start of header section
-	============================================= -->
+    <!-- Start of header section ============================================= -->
     <header id="organio-header" class="organio-header-section header-style-three">
         <div class="or-header-top">
             <div class="container">
                 <div class="or-header-top-content d-flex justify-content-between align-items-center">
                     <div class="or-header-top-slug">
-                        Welcome to our organico HTML Template!
+                        Welcome to our organico HTML Template! <?= $_SESSION['firstname'] ?>
                     </div>
                     <div class="or-header-top-social">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -45,9 +44,9 @@
                         <a href="#"><i class="fab fa-dribbble"></i></a>
                         <a href="#"><i class="fab fa-behance"></i></a>
                     </div>
+
                     <div class="or-header-top-login-btn position-relative">
-                        <a href="login.html">Login</a>
-                        <a href="register.html">Sign In</a>
+                        <a href="<?= $_SESSION['is_logged'] ? '' : base_url('login')  ?>"><?= $_SESSION['is_logged'] ? 'My Account' : 'Login' ?></a>
                     </div>
                 </div>
             </div>
@@ -75,7 +74,9 @@
                             </ul>
                         </nav>
                         <div class="or-header-right-btn">
-                            <button><i class="fal fa-heart"></i></button>
+                            <?php if ($_SESSION['is_logged']) : ?>
+                                <button title="My Account"><i class="fal fa-user"></i></button>
+                            <?php endif; ?>
                             <button class="or-canvas-cart-trigger"><i class="fal fa-shopping-cart"></i></button>
                             <button class="search-box-outer"><i class="fas fa-search"></i></button>
                         </div>
@@ -102,57 +103,10 @@
                             </div>
                             <nav class="mobile-main-navigation  clearfix ul-li">
                                 <ul id="m-main-nav" class="navbar-nav text-capitalize clearfix">
-                                    <li class="dropdown">
-                                        <a href="%21.html#">Home</a>
-                                        <ul class="dropdown-menu clearfix">
-                                            <li><a target="_blank" href="index-1.html">Home Page 1</a></li>
-                                            <li class="dropdown">
-                                                <a target="_blank" href="index-2.html">Home Page 2</a>
-                                                <ul class="dropdown-menu clearfix">
-                                                    <li><a target="_blank" href="#">Example v.1 </a></li>
-                                                    <li><a target="_blank" href="#">Example v.2</a></li>
-                                                    <li><a target="_blank" href="#">Example v.3</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a target="_blank" href="index-3.html">Home Page 3</a></li>
-                                            <li><a target="_blank" href="index-4.html">Home Page 4</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a target="_blank" href="about.html">About</a></li>
-                                    <li class="dropdown">
-                                        <a target="_blank" href="%21.html#">Shop</a>
-                                        <ul class="dropdown-menu clearfix">
-                                            <li><a target="_blank" href="shop.html">Shop Page </a></li>
-                                            <li><a target="_blank" href="shop-single.html">Shop Details</a></li>
-                                            <li><a target="_blank" href="cart.html">Cart Page</a></li>
-                                            <li><a target="_blank" href="checkout.html">Checkout Page</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a target="_blank" href="%21.html#">Pages</a>
-                                        <ul class="dropdown-menu clearfix">
-                                            <li><a target="_blank" href="service.html">Services</a></li>
-                                            <li><a target="_blank" href="team.html">Team Page</a></li>
-                                            <li><a target="_blank" href="team-single.html">Team Details</a></li>
-                                            <li><a target="_blank" href="service-single.html">Service Details</a></li>
-                                            <li><a target="_blank" href="contact.html">Contact Page</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a target="_blank" href="%21.html#">News</a>
-                                        <ul class="dropdown-menu clearfix">
-                                            <li><a target="_blank" href="blog.html">News </a></li>
-                                            <li><a target="_blank" href="blog-single.html">News Details</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="dropdown">
-                                        <a target="_blank" href="%21.html#">Others</a>
-                                        <ul class="dropdown-menu clearfix">
-                                            <li><a target="_blank" href="project.html">Portfolio </a></li>
-                                            <li><a target="_blank" href="404.html">404 Page </a></li>
-                                            <li><a target="_blank" href="project-single.html">Portfolio Details</a></li>
-                                        </ul>
-                                    </li>
+                                    <li><a href="about.html">Commander</a></li>
+                                    <li><a href="about.html">Comment ça marche ?</a></li>
+                                    <li><a href="shop.html">Menu du jour</a></li>
+                                    <li><a href="shop-single.html">Nos recettes</a></li>
                                 </ul>
                             </nav>
                         </div>

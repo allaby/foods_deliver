@@ -33,6 +33,9 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Pages::index');
 $routes->get('about', 'Pages::about');
+$routes->get('login', 'Pages::login_page');
+$routes->get('register', 'Pages::register_page');
+$routes->get('reset', 'Pages::reset_page');
 $routes->get('how-it-works', 'Pages::hiw');
 
 /*

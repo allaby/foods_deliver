@@ -1,0 +1,117 @@
+CRITICAL - 2022-03-30 05:16:01 --> Undefined index: firstname
+#0 C:\projets_web\forum\foods\app\Controllers\Auth.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index...', 'C:\\projets_web\\...', 17, Array)
+#1 C:\projets_web\forum\foods\system\CodeIgniter.php(832): App\Controllers\Auth->register()
+#2 C:\projets_web\forum\foods\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#3 C:\projets_web\forum\foods\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\projets_web\forum\foods\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\projets_web\forum\foods\system\Commands\Server\rewrite.php(43): require_once('C:\\projets_web\\...')
+#6 {main}
+CRITICAL - 2022-03-30 05:18:28 --> Argument 1 passed to CodeIgniter\Database\BaseConnection::query() must be of the type string, object given, called in C:\projets_web\forum\foods\app\Models\UserModel.php on line 14
+#0 C:\projets_web\forum\foods\app\Models\UserModel.php(14): CodeIgniter\Database\BaseConnection->query(Object(CodeIgniter\Database\MySQLi\Result))
+#1 C:\projets_web\forum\foods\app\Models\UserModel.php(28): App\Models\UserModel->fetchAll(Object(CodeIgniter\Database\MySQLi\Result))
+#2 C:\projets_web\forum\foods\app\Controllers\Auth.php(27): App\Models\UserModel->checkEmail('tiqa@mailinator...')
+#3 C:\projets_web\forum\foods\system\CodeIgniter.php(832): App\Controllers\Auth->register()
+#4 C:\projets_web\forum\foods\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#5 C:\projets_web\forum\foods\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\projets_web\forum\foods\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\projets_web\forum\foods\system\Commands\Server\rewrite.php(43): require_once('C:\\projets_web\\...')
+#8 {main}
+ERROR - 2022-03-30 05:44:50 --> Unknown column 'firstname' in 'field list'
+CRITICAL - 2022-03-30 05:44:50 --> Unknown column 'firstname' in 'field list'
+#0 C:\projets_web\forum\foods\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\projets_web\forum\foods\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\projets_web\forum\foods\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\projets_web\forum\foods\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\projets_web\forum\foods\app\Models\UserModel.php(38): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\projets_web\forum\foods\app\Controllers\Auth.php(42): App\Models\UserModel->addUser(Array)
+#6 C:\projets_web\forum\foods\system\CodeIgniter.php(832): App\Controllers\Auth->register()
+#7 C:\projets_web\forum\foods\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#8 C:\projets_web\forum\foods\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\projets_web\forum\foods\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 C:\projets_web\forum\foods\system\Commands\Server\rewrite.php(43): require_once('C:\\projets_web\\...')
+#11 {main}
+CRITICAL - 2022-03-30 05:45:25 --> Undefined property: CodeIgniter\Database\MySQLi\Builder::$insertID
+#0 C:\projets_web\forum\foods\app\Models\UserModel.php(40): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\projets_web\\...', 40, Array)
+#1 C:\projets_web\forum\foods\app\Controllers\Auth.php(42): App\Models\UserModel->addUser(Array)
+#2 C:\projets_web\forum\foods\system\CodeIgniter.php(832): App\Controllers\Auth->register()
+#3 C:\projets_web\forum\foods\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#4 C:\projets_web\forum\foods\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\projets_web\forum\foods\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 C:\projets_web\forum\foods\system\Commands\Server\rewrite.php(43): require_once('C:\\projets_web\\...')
+#7 {main}
+CRITICAL - 2022-03-30 06:43:53 --> Call to a member function table() on null
+#0 C:\projets_web\forum\foods\app\Controllers\BaseController.php(56): App\Models\UserModel->__construct()
+#1 C:\projets_web\forum\foods\system\CodeIgniter.php(810): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#2 C:\projets_web\forum\foods\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->createController()
+#3 C:\projets_web\forum\foods\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\projets_web\forum\foods\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\projets_web\forum\foods\system\Commands\Server\rewrite.php(43): require_once('C:\\projets_web\\...')
+#6 {main}
+CRITICAL - 2022-03-30 06:49:38 --> Only variables should be passed by reference
+#0 C:\projets_web\forum\foods\app\Controllers\Pages.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Only variables ...', 'C:\\projets_web\\...', 12, Array)
+#1 C:\projets_web\forum\foods\system\CodeIgniter.php(832): App\Controllers\Pages->index()
+#2 C:\projets_web\forum\foods\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#3 C:\projets_web\forum\foods\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\projets_web\forum\foods\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\projets_web\forum\foods\system\Commands\Server\rewrite.php(43): require_once('C:\\projets_web\\...')
+#6 {main}
+CRITICAL - 2022-03-30 06:52:16 --> Undefined property: CodeIgniter\View\View::$session
+#0 C:\projets_web\forum\foods\app\Views\templates\font_header.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\projets_web\\...', 47, Array)
+#1 C:\projets_web\forum\foods\system\View\View.php(210): include('C:\\projets_web\\...')
+#2 C:\projets_web\forum\foods\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\projets_web\forum\foods\system\Common.php(1089): CodeIgniter\View\View->render('templates/font_...', Array, true)
+#4 C:\projets_web\forum\foods\app\Controllers\Pages.php(14): view('templates/font_...')
+#5 C:\projets_web\forum\foods\system\CodeIgniter.php(832): App\Controllers\Pages->index()
+#6 C:\projets_web\forum\foods\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\projets_web\forum\foods\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\projets_web\forum\foods\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\projets_web\forum\foods\system\Commands\Server\rewrite.php(43): require_once('C:\\projets_web\\...')
+#10 {main}
+CRITICAL - 2022-03-30 06:54:49 --> Undefined property: CodeIgniter\View\View::$session
+#0 C:\projets_web\forum\foods\app\Views\templates\font_header.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\projets_web\\...', 47, Array)
+#1 C:\projets_web\forum\foods\system\View\View.php(210): include('C:\\projets_web\\...')
+#2 C:\projets_web\forum\foods\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\projets_web\forum\foods\system\Common.php(1089): CodeIgniter\View\View->render('templates/font_...', Array, true)
+#4 C:\projets_web\forum\foods\app\Controllers\Pages.php(12): view('templates/font_...')
+#5 C:\projets_web\forum\foods\system\CodeIgniter.php(832): App\Controllers\Pages->index()
+#6 C:\projets_web\forum\foods\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\projets_web\forum\foods\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\projets_web\forum\foods\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\projets_web\forum\foods\system\Commands\Server\rewrite.php(43): require_once('C:\\projets_web\\...')
+#10 {main}
+CRITICAL - 2022-03-30 06:57:25 --> Undefined variable: session
+#0 C:\projets_web\forum\foods\app\Views\templates\font_header.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\projets_web\\...', 47, Array)
+#1 C:\projets_web\forum\foods\system\View\View.php(210): include('C:\\projets_web\\...')
+#2 C:\projets_web\forum\foods\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\projets_web\forum\foods\system\Common.php(1089): CodeIgniter\View\View->render('templates/font_...', Array, true)
+#4 C:\projets_web\forum\foods\app\Controllers\Pages.php(12): view('templates/font_...')
+#5 C:\projets_web\forum\foods\system\CodeIgniter.php(832): App\Controllers\Pages->index()
+#6 C:\projets_web\forum\foods\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\projets_web\forum\foods\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\projets_web\forum\foods\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\projets_web\forum\foods\system\Commands\Server\rewrite.php(43): require_once('C:\\projets_web\\...')
+#10 {main}
+CRITICAL - 2022-03-30 07:43:10 --> Undefined property: CodeIgniter\View\View::$session
+#0 C:\projets_web\forum\foods\app\Views\templates\font_header.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\projets_web\\...', 39, Array)
+#1 C:\projets_web\forum\foods\system\View\View.php(210): include('C:\\projets_web\\...')
+#2 C:\projets_web\forum\foods\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\projets_web\forum\foods\system\Common.php(1089): CodeIgniter\View\View->render('templates/font_...', Array, true)
+#4 C:\projets_web\forum\foods\app\Controllers\Pages.php(12): view('templates/font_...')
+#5 C:\projets_web\forum\foods\system\CodeIgniter.php(832): App\Controllers\Pages->index()
+#6 C:\projets_web\forum\foods\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\projets_web\forum\foods\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\projets_web\forum\foods\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\projets_web\forum\foods\system\Commands\Server\rewrite.php(43): require_once('C:\\projets_web\\...')
+#10 {main}
+CRITICAL - 2022-03-30 07:43:54 --> Undefined property: CodeIgniter\View\View::$session
+#0 C:\projets_web\forum\foods\app\Views\templates\font_header.php(39): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\projets_web\\...', 39, Array)
+#1 C:\projets_web\forum\foods\system\View\View.php(210): include('C:\\projets_web\\...')
+#2 C:\projets_web\forum\foods\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\projets_web\forum\foods\system\Common.php(1089): CodeIgniter\View\View->render('templates/font_...', Array, true)
+#4 C:\projets_web\forum\foods\app\Controllers\Pages.php(13): view('templates/font_...')
+#5 C:\projets_web\forum\foods\system\CodeIgniter.php(832): App\Controllers\Pages->index()
+#6 C:\projets_web\forum\foods\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Pages))
+#7 C:\projets_web\forum\foods\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\projets_web\forum\foods\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\projets_web\forum\foods\system\Commands\Server\rewrite.php(43): require_once('C:\\projets_web\\...')
+#10 {main}
