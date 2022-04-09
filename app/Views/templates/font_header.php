@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home 3 | Organio</title>
+    <title><?= $page_title ?></title>
     <meta name="description" content="Organio - Organic Food Store HTML Templae ">
     <meta name="keywords" content="	farm, food, fresh, fruit, nutrition, organic, organic farm, organic food store, organic shop, organic store, organic theme, store, vegetable, woocommerce">
     <meta name="author" content="Themexriver">
@@ -36,7 +36,7 @@
             <div class="container">
                 <div class="or-header-top-content d-flex justify-content-between align-items-center">
                     <div class="or-header-top-slug">
-                        Welcome to our organico HTML Template! <?= $_SESSION['firstname'] ?>
+                        Welcome to our organico HTML Template!
                     </div>
                     <div class="or-header-top-social">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -46,7 +46,7 @@
                     </div>
 
                     <div class="or-header-top-login-btn position-relative">
-                        <a href="<?= $_SESSION['is_logged'] ? '' : base_url('login')  ?>"><?= $_SESSION['is_logged'] ? 'My Account' : 'Login' ?></a>
+                        <a href="<?= session('is_logged') ? '' : base_url('login')  ?>"><?= $_SESSION['is_logged'] ? 'My Account' : 'Login' ?></a>
                     </div>
                 </div>
             </div>
@@ -61,16 +61,16 @@
                         <nav class="main-navigation-area clearfix ul-li">
                             <ul class="menu-navigation">
 
-                                <li><a target="_blank" href="about.html">Commander</a></li>
-
-                                <li><a target="_blank" href="about.html">Commant ça marche ?</a></li>
+                                <li><a target="" href="about.html">Commander</a></li>
+                                <li><a target="" href="<?= base_url('how-it-works') ?>">Commant ça marche ?</a></li>
                                 <li class="dropdown">
-                                    <a target="_blank" href="%21.html#">No recettes</a>
+                                    <a target="" href="%21.html#">No recettes</a>
                                     <ul class="dropdown-menu clearfix">
-                                        <li><a target="_blank" href="project.html">Menu du jour</a></li>
-                                        <li><a target="_blank" href="404.html">Toues les recettes</a></li>
+                                        <li><a  href="<?= base_url('recepee_week') ?>">Menu de la semaine</a></li>
+                                        <li><a href="<?= base_url('recepee') ?>">Toues les recettes</a></li>
                                     </ul>
                                 </li>
+                                <li><a target="" href="<?= base_url('contact') ?>">Contact</a></li>
                             </ul>
                         </nav>
                         <div class="or-header-right-btn">
@@ -104,9 +104,10 @@
                             <nav class="mobile-main-navigation  clearfix ul-li">
                                 <ul id="m-main-nav" class="navbar-nav text-capitalize clearfix">
                                     <li><a href="about.html">Commander</a></li>
-                                    <li><a href="about.html">Comment ça marche ?</a></li>
-                                    <li><a href="shop.html">Menu du jour</a></li>
-                                    <li><a href="shop-single.html">Nos recettes</a></li>
+                                    <li><a href="<?= base_url('how-it-works') ?>">Comment ça marche ?</a></li>
+                                    <li><a href="<?= base_url('recepee_week') ?>">Menu de la semaine</a></li>
+                                    <li><a href="<?= base_url('recepee') ?>">Nos recettes</a></li>
+                                    <li><a href="<?= base_url('contact') ?>">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>

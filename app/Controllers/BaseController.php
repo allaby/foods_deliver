@@ -48,15 +48,15 @@ class BaseController extends Controller
      */
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
     {
+
+        $this->session = \Config\Services::session();
+        // $this->session->start();
+
         // Do Not Edit This Line
         parent::initController($request, $response, $logger);
 
         // Preload any models, libraries, etc, here.
 
         $this->userModel = new UserModel();
-
-        $this->session = \Config\Services::session();
-
-
     }
 }

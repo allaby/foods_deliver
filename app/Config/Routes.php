@@ -37,6 +37,15 @@ $routes->get('login', 'Pages::login_page');
 $routes->get('register', 'Pages::register_page');
 $routes->get('reset', 'Pages::reset_page');
 $routes->get('how-it-works', 'Pages::hiw');
+$routes->get('recepee', 'Pages::recepee');
+$routes->get('contact', 'Pages::contact');
+$routes->get('recepee_week', 'Pages::recepee_week');
+$routes->get('recipee/details', 'Recipee::details');
+
+$routes->get('admin/dashboard','Dashboard::index');
+$routes->get('admin/recipee/list','Recipee::list');
+$routes->get('admin/orders/list','Order::list');
+$routes->get('admin/user/profile','User::index');
 
 /*
  * --------------------------------------------------------------------
