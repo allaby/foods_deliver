@@ -62,6 +62,7 @@
  <script src="/backoffice/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
  <script src="/backoffice/plugins/datatables-buttons/js/buttons.print.min.js"></script>
  <script src="/backoffice/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+    <script src="/assets/js/customJS/recipe/ingredient.js"></script>
  <script>
      $(function() {
          $("#example1").DataTable({

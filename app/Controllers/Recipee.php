@@ -42,4 +42,39 @@ class Recipee extends BaseController
         echo view('admin/recipees/ingredient.php', $data);
         echo view('templates/back_footer.php');
     }
+
+    public function addIngredient()
+    {
+        // debug($_REQUEST);
+        $responce = array();
+        if ($_REQUEST) {
+            $name = $_REQUEST['name'];
+            $unit = $_REQUEST['unit'];
+            $qty = $_REQUEST['qty'];
+            $description = $_REQUEST['description'];
+            if (empty($name) || empty($qty)) {
+                $responce['success'] = false;
+                $responce['message'] = "Veillez remplir tous les champs obligatoires";
+            } else {
+                $data = array(
+                    "title" => $name,
+                    "unit" => $unit,
+                    "quantity" => $qty,
+                    "creation_date" => date('Y-m-d H:i:s'),
+                    "description" => $description
+                );
+
+                $newIngredient = $this->recipeeModel->addIngredient($data);
+                // debug($newIngredient);
+                if ($newIngredient['result']) {
+                    $responce['success'] = true;
+                    $responce['message'] = "Ingrédient ajouté !";
+                } else {
+                    $responce['success'] = false;
+                    $responce['message'] = "Erreur, veillez reéssayer !";
+                }
+            }
+        }
+        echo json_encode($responce);
+    }
 }

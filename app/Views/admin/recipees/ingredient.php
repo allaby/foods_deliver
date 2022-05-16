@@ -480,28 +480,28 @@
                 <form>
                     <div class="form-group">
                         <label for="">Nom</label>
-                        <input class="form-control" type="text" id="ingredient_name" name="">
+                        <input class="form-control" type="text" id="ingredient_name" name="ingredient_name">
                     </div>
                     <div class="form-group">
                         <label for="">Unité</label>
-                        <select class="form-control" id="ingredient_unit" name="">
+                        <select class="form-control" id="ingredient_unit" name="ingredient_unit">
                             <option value="g">Gramme (G) </option>
                             <option value="l">Litre (L)</option>
                         </select>
                     </div>
                     <div class="form-group">
                         <label for="">Quantité</label>
-                        <input class="form-control" type="number" id="ingredient_quantity" name="">
+                        <input class="form-control" type="number" id="ingredient_quantity" name="ingredient_quantity">
                     </div>
                     <div class="form-group">
                         <label for="">Description</label>
-                        <textarea class="form-control" id="ingredient_description"></textarea>
+                        <textarea class="form-control" id="ingredient_description" name="ingredient_description"></textarea>
                     </div>
                 </form>
             </div>
             <div class="modal-footer justify-content-between">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" onclick="addIngredient()" class="btn btn-primary">Save changes</button>
+                <button type="button" id="submit_btn" onclick="addIngredient()" class="btn btn-primary">Save changes</button>
             </div>
         </div>
         <!-- /.modal-content -->
