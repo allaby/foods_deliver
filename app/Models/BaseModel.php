@@ -8,6 +8,8 @@ class BaseModel extends Model
 {
 
     public $user_tb = "users";
+    public $recipee_tb = "recipes";
+    public $ingredient_tb = "ingredients";
 
     public function __construct()
     {

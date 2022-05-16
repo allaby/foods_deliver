@@ -42,10 +42,15 @@ $routes->get('contact', 'Pages::contact');
 $routes->get('recepee_week', 'Pages::recepee_week');
 $routes->get('recipee/details', 'Recipee::details');
 
+$routes->get('user/account/(:num)', 'user::cust_profile/$1');
+
 $routes->get('admin/dashboard','Dashboard::index');
 $routes->get('admin/recipee/list','Recipee::list');
+$routes->get('admin/recipee/ingredient','Recipee::ingredient');
 $routes->get('admin/orders/list','Order::list');
 $routes->get('admin/user/profile','User::index');
+
+$routes->get('user/logout', 'auth::logout');
 
 /*
  * --------------------------------------------------------------------

@@ -46,7 +46,7 @@
                     </div>
 
                     <div class="or-header-top-login-btn position-relative">
-                        <a href="<?= session('is_logged') ? '' : base_url('login')  ?>"><?= $_SESSION['is_logged'] ? 'My Account' : 'Login' ?></a>
+                        <a href="<?= (session('is_logged'))? base_url('user/account/'.session('user_id')) : base_url('login')  ?>"><?= (session('is_logged')) ? 'My Account' : 'Login' ?></a>
                     </div>
                 </div>
             </div>
@@ -74,7 +74,7 @@
                             </ul>
                         </nav>
                         <div class="or-header-right-btn">
-                            <?php if ($_SESSION['is_logged']) : ?>
+                            <?php if (session('is_logged')) : ?>
                                 <button title="My Account"><i class="fal fa-user"></i></button>
                             <?php endif; ?>
                             <button class="or-canvas-cart-trigger"><i class="fal fa-shopping-cart"></i></button>

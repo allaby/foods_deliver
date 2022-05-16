@@ -11,6 +11,7 @@ use Psr\Log\LoggerInterface;
 
 // use App\Model\UserModel;
 use App\Models\UserModel;
+use App\Models\RecipeeModel;
 use Tests\Support\Models\UserModel as SupportModelsUserModel;
 
 /**
@@ -58,5 +59,6 @@ class BaseController extends Controller
         // Preload any models, libraries, etc, here.
 
         $this->userModel = new UserModel();
+        $this->recipeeModel = new RecipeeModel();
     }
 }

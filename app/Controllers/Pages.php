@@ -18,6 +18,7 @@ class Pages extends BaseController
 
     function index()
     {
+        // var_dump(session('user_id'));exit;
         $data['page_title'] = "Accueil || " . self::SITE_NAME;
         echo view('templates/font_header', $data);
         echo view('pages/home');

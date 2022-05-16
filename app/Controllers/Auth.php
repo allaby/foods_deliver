@@ -94,4 +94,10 @@ class Auth extends BaseController
         echo json_encode($result);
         exit;
     }
+
+
+    public function logout(){
+        $this->session->destroy();
+        return redirect()->route('/');
+    }
 }

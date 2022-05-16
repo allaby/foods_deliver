@@ -18,7 +18,8 @@ class Recipee extends BaseController
 
 
 
-    public function list(){
+    public function list()
+    {
         $data['page_title'] = "Listes des recettes || " . self::SITE_NAME;
         $data['title'] = "Liste des recettes";
         $data['activebigmenu'] = "recipee";
@@ -26,6 +27,19 @@ class Recipee extends BaseController
         echo view('templates/back_header.php', $data);
         echo view('templates/back_sidebar.php', $data);
         echo view('admin/recipees/list.php', $data);
+        echo view('templates/back_footer.php');
+    }
+
+
+    public function ingredient()
+    {
+        $data['page_title'] = "Listes des ingredient || " . self::SITE_NAME;
+        $data['title'] = "Liste des ingredient";
+        $data['activebigmenu'] = "recipee";
+        $data['activemenu'] = "";
+        echo view('templates/back_header.php', $data);
+        echo view('templates/back_sidebar.php', $data);
+        echo view('admin/recipees/ingredient.php', $data);
         echo view('templates/back_footer.php');
     }
 }

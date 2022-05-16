@@ -65,6 +65,12 @@
                                 <p>Nouvel ajout</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="<?= base_url('admin/recipee/ingredient') ?>" class="nav-link">
+                                <i class="far fa-circle nav-icon"></i>
+                                <p>Ingredient</p>
+                            </a>
+                        </li>
                     </ul>
                 </li>
 
@@ -75,6 +81,24 @@
                         <p>
                             Commandes
                             <span class="right badge badge-danger">New</span>
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="<?= base_url('admin/user/list') ?>" class="nav-link <?= $activemenu == 'users' ? "active" : "" ?>">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            Utilisateur
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="<?= base_url('admin/user/list') ?>" class="nav-link <?= $activemenu == 'pubs' ? "active" : "" ?>">
+                        <i class="nav-icon fas fa-bullhorn"></i>
+                        <p>
+                            Annonces
                         </p>
                     </a>
                 </li>
