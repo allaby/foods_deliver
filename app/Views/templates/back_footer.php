@@ -62,7 +62,11 @@
  <script src="/backoffice/plugins/datatables-buttons/js/buttons.html5.min.js"></script>
  <script src="/backoffice/plugins/datatables-buttons/js/buttons.print.min.js"></script>
  <script src="/backoffice/plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
-    <script src="/assets/js/customJS/recipe/ingredient.js"></script>
+ <script src="/backoffice/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+ <!-- SweetAlert2 -->
+ <script src="/backoffice/plugins/sweetalert2/sweetalert2.min.js"></script>
+ <!-- Toastr -->
+ <script src="/backoffice/plugins/toastr/toastr.min.js"></script>
  <script>
      $(function() {
          $("#example1").DataTable({
@@ -80,6 +84,15 @@
              "autoWidth": false,
              "responsive": true,
          });
+     });
+ </script>
+ <script src="/assets/js/customJS/recipe/ingredient.js"></script>
+ <script>
+     var Toast = Swal.mixin({
+         toast: true,
+         position: 'top-end',
+         showConfirmButton: false,
+         timer: 3000
      });
  </script>
  </body>

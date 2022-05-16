@@ -35,6 +35,16 @@ class RecipeeModel extends BaseModel
         return $result;
     }
 
+    public function getIngrbyName($ingredient_name){
+        try {
+            $query = "SELECT * FROM ingredients WHERE title = '$ingredient_name' ";
+            $result = $this->fetchAll($query);
+            return $result;
+        } catch (Exception $e) {
+            return $e;
+        }
+    }
+
 
 
 

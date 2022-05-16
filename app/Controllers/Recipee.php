@@ -56,22 +56,30 @@ class Recipee extends BaseController
                 $responce['success'] = false;
                 $responce['message'] = "Veillez remplir tous les champs obligatoires";
             } else {
-                $data = array(
-                    "title" => $name,
-                    "unit" => $unit,
-                    "quantity" => $qty,
-                    "creation_date" => date('Y-m-d H:i:s'),
-                    "description" => $description
-                );
 
-                $newIngredient = $this->recipeeModel->addIngredient($data);
-                // debug($newIngredient);
-                if ($newIngredient['result']) {
-                    $responce['success'] = true;
-                    $responce['message'] = "Ingrédient ajouté !";
-                } else {
+                $checkIngredient = $this->recipeeModel->getIngrbyName($name);
+                // debug($checkIngredient);
+                if ($checkIngredient['rows'] >= 1) {
                     $responce['success'] = false;
-                    $responce['message'] = "Erreur, veillez reéssayer !";
+                    $responce['message'] = "Vous aviez déjâ ajouter cet ingrédient, veillez en ajouter un autre";
+                } else {
+                    $data = array(
+                        "title" => $name,
+                        "unit" => $unit,
+                        "quantity" => $qty,
+                        "creation_date" => date('Y-m-d H:i:s'),
+                        "description" => $description
+                    );
+
+                    $newIngredient = $this->recipeeModel->addIngredient($data);
+                    // debug($newIngredient);
+                    if ($newIngredient['result']) {
+                        $responce['success'] = true;
+                        $responce['message'] = "Ingrédient ajouté !";
+                    } else {
+                        $responce['success'] = false;
+                        $responce['message'] = "Erreur, veillez reéssayer !";
+                    }
                 }
             }
         }
